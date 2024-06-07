@@ -1,0 +1,209 @@
+<H1>Heading 1</H1>
+      <H2>Heading 2</H2>
+      <H3>Heading 3</H3>
+      <H4>Heading 4</H4>
+      <H5>Heading 5</H5>
+      <H6>Heading 6</H6>
+      <P>This is paragraph</P>
+      <Text>This is only text</Text>
+
+<Button variant="primary" action="primary">
+        Primary
+      </Button>
+      <Button variant="primary" action="secondary">
+        Secondary
+      </Button>
+      <Button variant="primary" action="tertiary">
+        Tertiary
+      </Button>
+      <Button variant="secondary" action="primary">
+        Primary
+      </Button>
+      <Button variant="secondary" action="secondary">
+        Secondary
+      </Button>
+      <Button variant="secondary" action="tertiary">
+        Tertiary
+      </Button>
+      <Button variant="accent" action="primary">
+        Primary
+      </Button>
+      <Button variant="accent" action="secondary">
+        Secondary
+      </Button>
+      <Button variant="accent" action="tertiary">
+        Tertiary
+      </Button>
+      <div className="bg-primary-400 p-3 d-grid gap-1 rounded">
+        <Button variant="white" action="primary">
+          Primary
+        </Button>
+        <Button variant="white" action="secondary">
+          Secondary
+        </Button>
+        <Button variant="white" action="tertiary">
+          Tertiary
+        </Button>
+      </div>
+      <Button variant="black" action="primary">
+        Primary
+      </Button>
+      <Button variant="black" action="secondary">
+        Secondary
+      </Button>
+      <Button variant="black" action="tertiary">
+        Tertiary
+      </Button>
+      <Button variant="red" action="primary">
+        Primary
+      </Button>
+      <Button variant="red" action="secondary">
+        Secondary
+      </Button>
+      <Button variant="red" action="tertiary">
+        Tertiary
+      </Button>
+      <Button variant="green" action="primary">
+        Primary
+      </Button>
+      <Button variant="green" action="secondary">
+        Secondary
+      </Button>
+      <Button variant="green" action="tertiary">
+        Tertiary
+      </Button>
+      <Button variant="blue" action="primary">
+        Primary
+      </Button>
+      <Button variant="blue" action="secondary">
+        Secondary
+      </Button>
+      <Button variant="blue" action="tertiary">
+        Tertiary
+      </Button>
+      <Button variant="violet" action="primary">
+        Primary
+      </Button>
+      <Button variant="violet" action="secondary">
+        Secondary
+      </Button>
+      <Button variant="violet" action="tertiary">
+        Tertiary
+      </Button>
+      <Button variant="magenta" action="primary">
+        Primary
+      </Button>
+      <Button variant="magenta" action="secondary">
+        Secondary
+      </Button>
+      <Button variant="magenta" action="tertiary">
+        Tertiary
+      </Button>
+      <Button variant="rose" action="primary">
+        Primary
+      </Button>
+      <Button variant="rose" action="secondary">
+        Secondary
+      </Button>
+      <Button variant="rose" action="tertiary">
+        Tertiary
+      </Button>
+      <Button variant="cyan" action="primary">
+        Primary
+      </Button>
+      <Button variant="cyan" action="secondary">
+        Secondary
+      </Button>
+      <Button variant="cyan" action="tertiary">
+        Tertiary
+      </Button>
+      <Button variant="azure" action="primary">
+        Primary
+      </Button>
+      <Button variant="azure" action="secondary">
+        Secondary
+      </Button>
+      <Button variant="azure" action="tertiary">
+        Tertiary
+      </Button>
+      <Button variant="spring-green" action="primary">
+        Primary
+      </Button>
+      <Button variant="spring-green" action="secondary">
+        Secondary
+      </Button>
+      <Button variant="spring-green" action="tertiary">
+        Tertiary
+      </Button>
+      <Button variant="chartreuse-green" action="primary">
+        Primary
+      </Button>
+      <Button variant="chartreuse-green" action="secondary">
+        Secondary
+      </Button>
+      <Button variant="chartreuse-green" action="tertiary">
+        Tertiary
+      </Button>
+      <Button variant="warning" action="primary">
+        Primary
+      </Button>
+      <Button variant="warning" action="secondary">
+        Secondary
+      </Button>
+      <Button variant="warning" action="tertiary">
+        Tertiary
+      </Button>
+      <Button variant="gray" action="primary">
+        Primary
+      </Button>
+      <Button variant="gray" action="secondary">
+        Secondary
+      </Button>
+      <Button variant="gray" action="tertiary">
+        Tertiary
+      </Button>
+      <Button variant="danger" action="primary">
+        Primary
+      </Button>
+      <Button variant="danger" action="secondary">
+        Secondary
+      </Button>
+      <Button variant="danger" action="tertiary">
+        Tertiary
+      </Button>
+      <Button variant="info" action="primary">
+        Primary
+      </Button>
+      <Button variant="info" action="secondary">
+        Secondary
+      </Button>
+      <Button variant="info" action="tertiary">
+        Tertiary
+      </Button>
+      <Button variant="orange" action="primary">
+        Primary
+      </Button>
+      <Button variant="orange" action="secondary">
+        Secondary
+      </Button>
+      <Button variant="orange" action="tertiary">
+        Tertiary
+      </Button>
+      <Button variant="success" action="primary">
+        Primary
+      </Button>
+      <Button variant="success" action="secondary">
+        Secondary
+      </Button>
+      <Button variant="success" action="tertiary">
+        Tertiary
+      </Button>
+      <Button variant="yellow" action="primary">
+        Primary
+      </Button>
+      <Button variant="yellow" action="secondary">
+        Secondary
+      </Button>
+      <Button variant="yellow" action="tertiary">
+        Tertiary
+      </Button>

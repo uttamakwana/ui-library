@@ -1,0 +1,721 @@
+/* common button styles */
+.ui-button {
+  padding: calc(var(--padding) - 6px) calc(var(--padding) * 1.125);
+  border-radius: calc(var(--border-radius) / 4);
+  border: none;
+  outline: none;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.ui-button-with-icon {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--gap) / 2);
+}
+
+.ui-button:disabled {
+  filter: brightness(75%);
+  cursor: not-allowed;
+}
+
+.ui-button-loading-spinner {
+  animation: spin 1000ms linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+
+.ui-button.focus-within-effect::before {
+  --inline-offset: 0.75;
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  scale: 0 1;
+  left: calc(var(--padding) * var(--inline-offset));
+  right: calc(var(--padding) * var(--inline-offset));
+  background: rgba(255, 255, 255, 0.2);
+  transition: all ease 200ms;
+  border-radius: 10%;
+}
+
+.ui-button.focus-within-effect:focus-within::before {
+  scale: 1;
+}
+
+.ripple-effect {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  transform: scale(0);
+  animation: ripple-animation 0.6s linear;
+}
+
+@keyframes ripple-animation {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* button-variant-action */
+/* total variant 18 */
+/* total action 3 */
+/* variant:- primary | secondary | accent | white | black | gray | red | green | blue | yellow | spring green | chartreuse green | violet | magenta | rose | orange | cyan | azure */
+/* action:- primary | secondary | tertiary */
+
+/* variant primary */
+.ui-button-primary-primary {
+  background-color: var(--clr-primary-400);
+  color: var(--clr-white-950);
+}
+
+.ui-button-primary-primary-hover:hover {
+  background-color: var(--clr-primary-500);
+}
+
+.ui-button-primary-secondary {
+  background-color: var(--clr-primary-50);
+  color: var(--clr-primary-950);
+}
+
+.ui-button-primary-secondary-hover:hover {
+  background-color: var(--clr-primary-100);
+}
+
+.ui-button-primary-tertiary {
+  background-color: transparent;
+  color: var(--clr-primary-950);
+}
+
+.ui-button-primary-tertiary-hover:hover {
+  background-color: var(--clr-primary-50);
+}
+
+/* variant secondary */
+.ui-button-secondary-primary {
+  background-color: var(--clr-secondary-400);
+  color: var(--clr-white-950);
+}
+
+.ui-button-secondary-primary-hover:hover {
+  background-color: var(--clr-secondary-500);
+}
+
+.ui-button-secondary-secondary {
+  background-color: var(--clr-secondary-50);
+  color: var(--clr-secondary-950);
+}
+
+.ui-button-secondary-secondary-hover:hover {
+  background-color: var(--clr-secondary-100);
+}
+
+.ui-button-secondary-tertiary {
+  background-color: transparent;
+  color: var(--clr-secondary-950);
+}
+
+.ui-button-secondary-tertiary-hover:hover {
+  background-color: var(--clr-secondary-50);
+}
+
+/* variant accent */
+.ui-button-accent-primary {
+  background-color: var(--clr-accent-400);
+  color: var(--clr-accent-950);
+}
+
+.ui-button-accent-primary-hover:hover {
+  background-color: var(--clr-accent-500);
+}
+
+.ui-button-accent-secondary {
+  background-color: var(--clr-accent-50);
+  color: var(--clr-accent-950);
+}
+
+.ui-button-accent-secondary-hover:hover {
+  background-color: var(--clr-accent-100);
+}
+
+.ui-button-accent-tertiary {
+  background-color: transparent;
+  color: var(--clr-accent-950);
+}
+
+.ui-button-accent-tertiary-hover:hover {
+  background-color: var(--clr-accent-50);
+}
+
+/* variant white */
+.ui-button-white-primary {
+  background-color: var(--clr-white-950);
+  color: var(--clr-black-950);
+}
+
+.ui-button-white-primary-hover:hover {
+  background-color: var(--clr-white-900);
+}
+
+.ui-button-white-secondary {
+  background-color: var(--clr-white-800);
+  color: var(--clr-black-950);
+}
+
+.ui-button-white-secondary-hover:hover {
+  background-color: var(--clr-white-700);
+}
+
+.ui-button-white-tertiary {
+  background-color: transparent;
+  color: var(--clr-white-950);
+}
+
+.ui-button-white-tertiary-hover:hover {
+  background-color: var(--clr-white-950);
+  color: var(--clr-black-950);
+}
+
+/* variant black */
+.ui-button-black-primary {
+  background-color: var(--clr-black-950);
+  color: var(--clr-white-950);
+}
+
+.ui-button-black-primary-hover:hover {
+  background-color: var(--clr-black-500);
+}
+
+.ui-button-black-secondary {
+  background-color: var(--clr-black-50);
+  color: var(--clr-white-950);
+}
+
+.ui-button-black-secondary-hover:hover {
+  background-color: var(--clr-black-100);
+}
+
+.ui-button-black-tertiary {
+  background-color: transparent;
+  color: var(--clr-black-950);
+}
+
+.ui-button-black-tertiary-hover:hover {
+  background-color: var(--clr-black-950);
+  color: var(--clr-white-950);
+}
+
+/* variant red */
+.ui-button-red-primary {
+  background-color: var(--clr-red-400);
+  color: var(--clr-white-950);
+}
+
+.ui-button-red-primary-hover:hover {
+  background-color: var(--clr-red-500);
+}
+
+.ui-button-red-secondary {
+  background-color: var(--clr-red-50);
+  color: var(--clr-red-950);
+}
+
+.ui-button-red-secondary-hover:hover {
+  background-color: var(--clr-red-100);
+}
+
+.ui-button-red-tertiary {
+  background-color: transparent;
+  color: var(--clr-red-950);
+}
+
+.ui-button-red-tertiary-hover:hover {
+  background-color: var(--clr-red-50);
+}
+
+/* variant green */
+.ui-button-green-primary {
+  background-color: var(--clr-green-400);
+  color: var(--clr-white-950);
+}
+
+.ui-button-green-primary-hover:hover {
+  background-color: var(--clr-green-500);
+}
+
+.ui-button-green-secondary {
+  background-color: var(--clr-green-50);
+  color: var(--clr-green-950);
+}
+
+.ui-button-green-secondary-hover:hover {
+  background-color: var(--clr-green-100);
+}
+
+.ui-button-green-tertiary {
+  background-color: transparent;
+  color: var(--clr-green-950);
+}
+
+.ui-button-green-tertiary-hover:hover {
+  background-color: var(--clr-green-50);
+}
+
+/* variant blue */
+.ui-button-blue-primary {
+  background-color: var(--clr-blue-400);
+  color: var(--clr-white-950);
+}
+
+.ui-button-blue-primary-hover:hover {
+  background-color: var(--clr-blue-500);
+}
+
+.ui-button-blue-secondary {
+  background-color: var(--clr-blue-50);
+  color: var(--clr-blue-950);
+}
+
+.ui-button-blue-secondary-hover:hover {
+  background-color: var(--clr-blue-100);
+}
+
+.ui-button-blue-tertiary {
+  background-color: transparent;
+  color: var(--clr-blue-950);
+}
+
+.ui-button-blue-tertiary-hover:hover {
+  background-color: var(--clr-blue-50);
+}
+
+/* variant violet */
+.ui-button-violet-primary {
+  background-color: var(--clr-violet-400);
+  color: var(--clr-white-950);
+}
+
+.ui-button-violet-primary-hover:hover {
+  background-color: var(--clr-violet-500);
+}
+
+.ui-button-violet-secondary {
+  background-color: var(--clr-violet-50);
+  color: var(--clr-violet-950);
+}
+
+.ui-button-violet-secondary-hover:hover {
+  background-color: var(--clr-violet-100);
+}
+
+.ui-button-violet-tertiary {
+  background-color: transparent;
+  color: var(--clr-violet-950);
+}
+
+.ui-button-violet-tertiary-hover:hover {
+  background-color: var(--clr-violet-50);
+}
+
+/* variant magenta */
+.ui-button-magenta-primary {
+  background-color: var(--clr-magenta-400);
+  color: var(--clr-white-950);
+}
+
+.ui-button-magenta-primary-hover:hover {
+  background-color: var(--clr-magenta-500);
+}
+
+.ui-button-magenta-secondary {
+  background-color: var(--clr-magenta-50);
+  color: var(--clr-magenta-950);
+}
+
+.ui-button-magenta-secondary-hover:hover {
+  background-color: var(--clr-magenta-100);
+}
+
+.ui-button-magenta-tertiary {
+  background-color: transparent;
+  color: var(--clr-magenta-950);
+}
+
+.ui-button-magenta-tertiary-hover:hover {
+  background-color: var(--clr-magenta-50);
+}
+
+/* variant rose */
+.ui-button-rose-primary {
+  background-color: var(--clr-rose-400);
+  color: var(--clr-white-950);
+}
+
+.ui-button-rose-primary-hover:hover {
+  background-color: var(--clr-rose-500);
+}
+
+.ui-button-rose-secondary {
+  background-color: var(--clr-rose-50);
+  color: var(--clr-rose-950);
+}
+
+.ui-button-rose-secondary-hover:hover {
+  background-color: var(--clr-rose-100);
+}
+
+.ui-button-rose-tertiary {
+  background-color: transparent;
+  color: var(--clr-rose-950);
+}
+
+.ui-button-rose-tertiary-hover:hover {
+  background-color: var(--clr-rose-50);
+}
+
+/* variant cyan */
+.ui-button-cyan-primary {
+  background-color: var(--clr-cyan-400);
+  color: var(--clr-cyan-950);
+}
+
+.ui-button-cyan-primary-hover:hover {
+  background-color: var(--clr-cyan-500);
+}
+
+.ui-button-cyan-secondary {
+  background-color: var(--clr-cyan-50);
+  color: var(--clr-cyan-950);
+}
+
+.ui-button-cyan-secondary-hover:hover {
+  background-color: var(--clr-cyan-100);
+}
+
+.ui-button-cyan-tertiary {
+  background-color: transparent;
+  color: var(--clr-cyan-950);
+}
+
+.ui-button-cyan-tertiary-hover:hover {
+  background-color: var(--clr-cyan-50);
+}
+
+/* variant azure */
+.ui-button-azure-primary {
+  background-color: var(--clr-azure-400);
+  color: var(--clr-white-950);
+}
+
+.ui-button-azure-primary-hover:hover {
+  background-color: var(--clr-azure-500);
+}
+
+.ui-button-azure-secondary {
+  background-color: var(--clr-azure-50);
+  color: var(--clr-azure-950);
+}
+
+.ui-button-azure-secondary-hover:hover {
+  background-color: var(--clr-azure-100);
+}
+
+.ui-button-azure-tertiary {
+  background-color: transparent;
+  color: var(--clr-azure-950);
+}
+
+.ui-button-azure-tertiary-hover:hover {
+  background-color: var(--clr-azure-50);
+}
+
+/* variant spring green */
+.ui-button-spring-green-primary {
+  background-color: var(--clr-spring-green-400);
+  color: var(--clr-spring-950);
+}
+
+.ui-button-spring-green-primary-hover:hover {
+  background-color: var(--clr-spring-green-500);
+}
+
+.ui-button-spring-green-secondary {
+  background-color: var(--clr-spring-green-50);
+  color: var(--clr-spring-green-950);
+}
+
+.ui-button-spring-green-secondary-hover:hover {
+  background-color: var(--clr-spring-green-100);
+}
+
+.ui-button-spring-green-tertiary {
+  background-color: transparent;
+  color: var(--clr-spring-green-950);
+}
+
+.ui-button-spring-green-tertiary-hover:hover {
+  background-color: var(--clr-spring-green-50);
+}
+
+/* variant chartreuse green */
+.ui-button-chartreuse-green-primary {
+  background-color: var(--clr-chartreuse-green-400);
+  color: var(--clr-chartreuse-green-950);
+}
+
+.ui-button-chartreuse-green-primary-hover:hover {
+  background-color: var(--clr-chartreuse-green-500);
+}
+
+.ui-button-chartreuse-green-secondary {
+  background-color: var(--clr-chartreuse-green-50);
+  color: var(--clr-chartreuse-green-950);
+}
+
+.ui-button-chartreuse-green-secondary-hover:hover {
+  background-color: var(--clr-chartreuse-green-100);
+}
+
+.ui-button-chartreuse-green-tertiary {
+  background-color: transparent;
+  color: var(--clr-chartreuse-green-950);
+}
+
+.ui-button-chartreuse-green-tertiary-hover:hover {
+  background-color: var(--clr-chartreuse-green-50);
+}
+
+/* variant warning */
+.ui-button-warning-primary {
+  background-color: var(--clr-warning-400);
+  color: var(--clr-white-950);
+}
+
+.ui-button-warning-primary-hover:hover {
+  background-color: var(--clr-warning-500);
+}
+
+.ui-button-warning-secondary {
+  background-color: var(--clr-warning-50);
+  color: var(--clr-warning-950);
+}
+
+.ui-button-warning-secondary-hover:hover {
+  background-color: var(--clr-warning-100);
+}
+
+.ui-button-warning-tertiary {
+  background-color: transparent;
+  color: var(--clr-warning-950);
+}
+
+.ui-button-warning-tertiary-hover:hover {
+  background-color: var(--clr-warning-50);
+}
+
+/* variant gray */
+.ui-button-gray-primary {
+  background-color: var(--clr-gray-950);
+  color: var(--clr-white-950);
+}
+
+.ui-button-gray-primary-hover:hover {
+  background-color: var(--clr-gray-900);
+}
+
+.ui-button-gray-secondary {
+  background-color: var(--clr-gray-50);
+  color: var(--clr-white-950);
+}
+
+.ui-button-gray-secondary-hover:hover {
+  background-color: var(--clr-gray-100);
+}
+
+.ui-button-gray-tertiary {
+  background-color: transparent;
+  color: var(--clr-gray-950);
+}
+
+.ui-button-gray-tertiary-hover:hover {
+  background-color: var(--clr-gray-50);
+  color: var(--clr-white-950);
+}
+
+/* variant success */
+.ui-button-success-primary {
+  background-color: var(--clr-success-400);
+  color: var(--clr-white-950);
+}
+
+.ui-button-success-primary-hover:hover {
+  background-color: var(--clr-success-500);
+}
+
+.ui-button-success-secondary {
+  background-color: var(--clr-success-50);
+  color: var(--clr-success-950);
+}
+
+.ui-button-success-secondary-hover:hover {
+  background-color: var(--clr-success-100);
+}
+
+.ui-button-success-tertiary {
+  background-color: transparent;
+  color: var(--clr-success-950);
+}
+
+.ui-button-success-tertiary-hover:hover {
+  background-color: var(--clr-success-50);
+}
+
+/* variant info */
+.ui-button-info-primary {
+  background-color: var(--clr-info-400);
+  color: var(--clr-white-950);
+}
+
+.ui-button-info-primary-hover:hover {
+  background-color: var(--clr-info-500);
+}
+
+.ui-button-info-secondary {
+  background-color: var(--clr-info-50);
+  color: var(--clr-info-950);
+}
+
+.ui-button-info-secondary-hover:hover {
+  background-color: var(--clr-info-100);
+}
+
+.ui-button-info-tertiary {
+  background-color: transparent;
+  color: var(--clr-info-950);
+}
+
+.ui-button-info-tertiary-hover:hover {
+  background-color: var(--clr-info-50);
+}
+
+/* variant warning */
+.ui-button-warning-primary {
+  background-color: var(--clr-warning-400);
+  color: var(--clr-white-950);
+}
+
+.ui-button-warning-primary-hover:hover {
+  background-color: var(--clr-warning-500);
+}
+
+.ui-button-warning-secondary {
+  background-color: var(--clr-warning-50);
+  color: var(--clr-warning-950);
+}
+
+.ui-button-warning-secondary-hover:hover {
+  background-color: var(--clr-warning-100);
+}
+
+.ui-button-warning-tertiary {
+  background-color: transparent;
+  color: var(--clr-warning-950);
+}
+
+.ui-button-warning-tertiary-hover:hover {
+  background-color: var(--clr-warning-50);
+}
+
+/* variant danger */
+.ui-button-danger-primary {
+  background-color: var(--clr-danger-400);
+  color: var(--clr-white-950);
+}
+
+.ui-button-danger-primary-hover:hover {
+  background-color: var(--clr-danger-500);
+}
+
+.ui-button-danger-secondary {
+  background-color: var(--clr-danger-50);
+  color: var(--clr-danger-950);
+}
+
+.ui-button-danger-secondary-hover:hover {
+  background-color: var(--clr-danger-100);
+}
+
+.ui-button-danger-tertiary {
+  background-color: transparent;
+  color: var(--clr-danger-950);
+}
+
+.ui-button-danger-tertiary-hover:hover {
+  background-color: var(--clr-danger-50);
+}
+
+/* variant orange */
+.ui-button-orange-primary {
+  background-color: var(--clr-orange-400);
+  color: var(--clr-white-950);
+}
+
+.ui-button-orange-primary-hover:hover {
+  background-color: var(--clr-orange-500);
+}
+
+.ui-button-orange-secondary {
+  background-color: var(--clr-orange-50);
+  color: var(--clr-orange-950);
+}
+
+.ui-button-orange-secondary-hover:hover {
+  background-color: var(--clr-orange-100);
+}
+
+.ui-button-orange-tertiary {
+  background-color: transparent;
+  color: var(--clr-orange-950);
+}
+
+.ui-button-orange-tertiary-hover:hover {
+  background-color: var(--clr-orange-50);
+}
+
+/* variant yellow */
+.ui-button-yellow-primary {
+  background-color: var(--clr-yellow-400);
+  color: var(--clr-white-950);
+}
+
+.ui-button-yellow-primary-hover:hover {
+  background-color: var(--clr-yellow-500);
+}
+
+.ui-button-yellow-secondary {
+  background-color: var(--clr-yellow-50);
+  color: var(--clr-yellow-950);
+}
+
+.ui-button-yellow-secondary-hover:hover {
+  background-color: var(--clr-yellow-100);
+}
+
+.ui-button-yellow-tertiary {
+  background-color: transparent;
+  color: var(--clr-yellow-950);
+}
+
+.ui-button-yellow-tertiary-hover:hover {
+  background-color: var(--clr-yellow-50);
+}
